@@ -1,0 +1,22 @@
+{
+  "name": "vueschool-downloader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leo9iota/vueschool-downloader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leo9iota/vueschool-downloader/issues"
+  },
+  "homepage": "https://github.com/leo9iota/vueschool-downloader#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.8"
+  }
+}
