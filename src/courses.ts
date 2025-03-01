@@ -16,6 +16,7 @@ export interface ChapterData {
 export interface LessonData {
     title: string | null;
     url: string;
+    videoUrl?: string | null;
 }
 
 /**
@@ -45,16 +46,15 @@ export async function processCourseData(page: Page, url: string): Promise<Course
 
     const title = await page.$eval('h1', (el) => el.textContent);
 
-    // Extract all chapters
     const chapters: ChapterData[] = await page.$$eval('.chapter', (chapterElements) => {
         return chapterElements.map((chapter) => {
             const chapterTitle = chapter.querySelector('h2')?.textContent?.trim() || null;
 
-            // Extract lessons (only title and URL)
             const lessons: LessonData[] = Array.from(chapter.querySelectorAll('.title')).map(
                 (lesson) => ({
                     title: lesson.textContent?.trim() || null,
                     url: (lesson.closest('a') as HTMLAnchorElement)?.href || '',
+                    videoUrl: null, // Placeholder, will be updated later
                 })
             );
 
@@ -65,9 +65,41 @@ export async function processCourseData(page: Page, url: string): Promise<Course
         });
     });
 
+    // Process each lesson to get the Vimeo video URL
+    for (const chapter of chapters) {
+        for (const lesson of chapter.lessons) {
+            lesson.videoUrl = await processLessonData(page, lesson.url);
+            console.log(`🎥 Extracted video URL: ${lesson.videoUrl}`);
+        }
+    }
+
     return {
         url,
         title,
         chapters,
     };
+}
+
+/**
+ * Extracts the Vimeo video URL from a lesson page.
+ * @param page The Playwright Page object to use
+ * @param lessonUrl The lesson URL to navigate to
+ * @returns Promise that resolves to the Vimeo video URL or null
+ */
+export async function processLessonData(page: Page, lessonUrl: string): Promise<string | null> {
+    await navigateToPage(page, lessonUrl);
+    console.log(`Processing lesson: ${lessonUrl}`);
+
+    // Extract the Vimeo iframe URL
+    const rawVideoUrl = await page
+        .$eval(
+            'iframe[src*="player.vimeo.com/video/"]',
+            (iframe) => (iframe as HTMLIFrameElement).src
+        )
+        .catch(() => null);
+
+    if (!rawVideoUrl) return null;
+
+    // Extract only the clean Vimeo URL (remove query parameters)
+    return rawVideoUrl.split('?')[0];
 }

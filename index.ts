@@ -34,7 +34,7 @@ import { saveToFile } from './src/utils';
             }
         }
 
-        // Save structured course data with chapters & lessons
+        // Save structured course data including video URLs
         await saveToFile('./output/course-details.json', courseData);
     } catch (error: unknown) {
         console.error('❌ Error scraping courses:', error);
