@@ -90,16 +90,32 @@ export async function processLessonData(page: Page, lessonUrl: string): Promise<
     await navigateToPage(page, lessonUrl);
     console.log(`Processing lesson: ${lessonUrl}`);
 
-    // Extract the Vimeo iframe URL
-    const rawVideoUrl = await page
-        .$eval(
-            'iframe[src*="player.vimeo.com/video/"]',
-            (iframe) => (iframe as HTMLIFrameElement).src
-        )
-        .catch(() => null);
+    try {
+        // Wait for the iframe to load (max 10 seconds)
+        const iframeElement = await page.waitForSelector('iframe[src*="player.vimeo.com/video/"]', {
+            timeout: 10000,
+        });
 
-    if (!rawVideoUrl) return null;
+        if (!iframeElement) {
+            console.error(`❌ No iframe found for lesson: ${lessonUrl}`);
+            return null;
+        }
 
-    // Extract only the clean Vimeo URL (remove query parameters)
-    return rawVideoUrl.split('?')[0];
+        // Extract the Vimeo URL
+        const rawVideoUrl = await iframeElement.getAttribute('src');
+
+        if (!rawVideoUrl) {
+            console.error(`❌ Failed to extract video URL from iframe for: ${lessonUrl}`);
+            return null;
+        }
+
+        // Remove query parameters to get clean video URL
+        const cleanVideoUrl = rawVideoUrl.split('?')[0];
+        console.log(`🎥 Extracted video URL: ${cleanVideoUrl}`);
+
+        return cleanVideoUrl;
+    } catch (error) {
+        console.error(`❌ Error extracting video URL for ${lessonUrl}:`, error);
+        return null;
+    }
 }
