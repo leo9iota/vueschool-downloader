@@ -1,3 +1,4 @@
+// ./src/auth.ts
 import { Page } from 'playwright';
 import { promises as fs } from 'fs'; // ✅ Use async-friendly `fs.promises`
 

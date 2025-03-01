@@ -1,9 +1,10 @@
 // index.ts
 import { Browser } from 'playwright';
 import { launchBrowser } from './src/browser';
-import { createNewPage, navigateToPage } from './src/scraper';
+import { createNewPage } from './src/scraper';
 import { CourseData, getCourseUrls, processCourseData } from './src/courses';
 import { saveToFile } from './src/utils';
+import { login, loadCookies } from './src/auth';
 
 /**
  * Main application function that:
@@ -17,10 +18,12 @@ import { saveToFile } from './src/utils';
     const page = await createNewPage(browser);
 
     try {
+        await loadCookies(page); // Try to reuse cookies
+        await login(page); // Log in if necessary
+
         const courseUrls: string[] = await getCourseUrls(page);
         console.log('Extracted Course URLs:', courseUrls);
 
-        // Save course URLs to a JSON file
         await saveToFile('./output/courses.json', courseUrls);
 
         const courseData: CourseData[] = [];
@@ -34,7 +37,6 @@ import { saveToFile } from './src/utils';
             }
         }
 
-        // Save structured course data including video URLs
         await saveToFile('./output/course-details.json', courseData);
     } catch (error: unknown) {
         console.error('❌ Error scraping courses:', error);
