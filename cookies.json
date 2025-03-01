@@ -1,0 +1,472 @@
+[
+    {
+        "name": "",
+        "value": "undefined",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "__cf_bm",
+        "value": "4UDBY2FemBJ6sxBL45eOetJf.j2C1PKjH5y2JXpIjQk-1740849243-1.0.1.1-CNTPO9FBN__CnuRONWl7UA7gchLzTCStI8j6mlAY68LV7Q.WZ2wNvwHeiX1G8pTwE58ELAT.etRgq7O7R6OJUQyOku_tDIQ.Pb_gAHR48uk",
+        "domain": ".onesignal.com",
+        "path": "/",
+        "expires": 1740851043.960082,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_gcl_au",
+        "value": "1.1.955368307.1740849244",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1748625244,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_gd_visitor",
+        "value": "7dcb3267-cda3-4212-8458-c1df2d822dd2",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": 1775409244.132768,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_gd_session",
+        "value": "e4d4ffda-3992-4181-86cd-e24c4996b8b5",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": 1740863644,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_fbp",
+        "value": "fb.1.1740849244186.54661721737051778",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1748625249,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "CLID",
+        "value": "7d167687772240c7a9b4f41e4afa2a60.20250301.20260301",
+        "domain": "www.clarity.ms",
+        "path": "/",
+        "expires": 1772385244.226571,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "lidc",
+        "value": "\"b=VGST04:s=V:r=V:a=V:p=V:g=3465:u=1:x=1:i=1740849244:t=1740935644:v=2:sig=AQExaOzLR9xDG9_ZxUJnHxscA4sWmcWD\"",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1740935645.347779,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "IDE",
+        "value": "AHWqTUnCFciMxqtXyYJiN6XtrNNFoD3btEDwGZajTd-ZpzP4g8KcLF6PYbCM1Rda",
+        "domain": ".doubleclick.net",
+        "path": "/",
+        "expires": 1775409244.34689,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "bcookie",
+        "value": "\"v=2&15e7407a-0b28-4520-88a5-bbc30ded0cc7\"",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1772385245.347712,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "li_gc",
+        "value": "MTswOzE3NDA4NDkyNDQ7MjswMjEg7aLpvC5YJW/Otca95Kf7nPOYe6hq+YDnJ6WaCbxuJQ==",
+        "domain": ".linkedin.com",
+        "path": "/",
+        "expires": 1756401245.347751,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_gid",
+        "value": "GA1.2.1936803863.1740849244",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1740935650,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_gat_gtag_UA_92333909_1",
+        "value": "1",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1740849304,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_vh_gid",
+        "value": "74584913297",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": 1775409249.69057,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_vh_sid",
+        "value": "190634784016",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": 1740850144,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_clck",
+        "value": "aq4x3h%7C2%7Cftu%7C0%7C1886",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1772385244,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "MUID",
+        "value": "2E2D0193790B695B2635143178506830",
+        "domain": ".bing.com",
+        "path": "/",
+        "expires": 1774545244.562645,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "MR",
+        "value": "0",
+        "domain": ".c.bing.com",
+        "path": "/",
+        "expires": 1741454044.562706,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "SRM_B",
+        "value": "2E2D0193790B695B2635143178506830",
+        "domain": ".c.bing.com",
+        "path": "/",
+        "expires": 1774545244.562733,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "SM",
+        "value": "C",
+        "domain": ".c.clarity.ms",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "MUID",
+        "value": "2E2D0193790B695B2635143178506830",
+        "domain": ".clarity.ms",
+        "path": "/",
+        "expires": 1774545244.593958,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "MR",
+        "value": "0",
+        "domain": ".c.clarity.ms",
+        "path": "/",
+        "expires": 1741454044.593997,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "ANONCHK",
+        "value": "0",
+        "domain": ".c.clarity.ms",
+        "path": "/",
+        "expires": 1740849844.594016,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "cb_group_id",
+        "value": "null",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1772385249,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "cb_anonymous_id",
+        "value": "%22588a1324-904b-4b52-af8f-b9cf8470d09d%22",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1772385244,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "km_ai",
+        "value": "r6VcBXkCN8eLuUQlByPEdMoA7Ws%3D",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1775409244.981997,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "km_vs",
+        "value": "1",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1740851050,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "cb_user_id",
+        "value": "%22gakib42272%40apklamp.com%22",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1772385249,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "coupon",
+        "value": "eyJpdiI6InhVanVzekxEeXJnL04rM3RlbmpFZXc9PSIsInZhbHVlIjoiMHFkM0dnUEU0U1BFc3I4WG5vYWdLa2hwTGx2YmdlNGZOMUhQakFOZndGUmFzVjg0QVM4RUM0RFo2dThqblY1STJFS2hVc0RmbzBIZ3dWc20zT1ZrNkE9PSIsIm1hYyI6ImIzMTk2ODc0MDhlZGJlYTI0NjkyMjA1NmNlNGExYjNjNTljNzRkZjMyOGRkM2QyNTJjMzQ2ZDMzZDYxMjdjYWIiLCJ0YWciOiIifQ%3D%3D",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1741772286.982097,
+        "httpOnly": true,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "user-data",
+        "value": "%7B%22id%22%3A252383%2C%22name%22%3A%22Morrol%20%22%2C%22firstname%22%3A%22Morrol%22%2C%22lastname%22%3A%22%22%2C%22email%22%3A%22gakib42272%40apklamp.com%22%2C%22country_code%22%3A%22CH%22%2C%22billing_details%22%3Anull%2C%22billing_address%22%3Anull%2C%22company_name%22%3Anull%2C%22role%22%3A%22user%22%2C%22has_access_latest_mc%22%3Afalse%2C%22affiliate%22%3Afalse%2C%22affiliate_key%22%3Anull%2C%22admin%22%3Afalse%2C%22team_owner%22%3Afalse%2C%22team_member%22%3Afalse%2C%22skill_level%22%3Anull%2C%22banner_affiliate%22%3A%22vueschool%22%2C%22pass%22%3Anull%2C%22settings%22%3A%7B%22terms%22%3Atrue%7D%2C%22token%22%3A%22176693%7CvBgSGRNsnMLGZnzlub3x6yNj37OLjZ00d9dM1FYk577146c2%22%7D",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": 1740849547.408059,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "loggedIn",
+        "value": "1",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1775409249.396825,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "XSRF-TOKEN",
+        "value": "eyJpdiI6IjdtZzhRTyt2M3lNUUhQTHdGVUFyYUE9PSIsInZhbHVlIjoiZ2VDUzlaVGtLOStkeFFTMXltVzRYbVVReXFOZmtEQ0h4QmhKcHJhZ1pOY2tDNFlVempCbVJvUW14OWRBUHdOeHUxTTdCeFNMakxWMUwyZ2RzOTZVSGdRL25FVjQ5NW5BRVVRL3BNZXJYZUY5YXE2Z0FxZG41Zlo0aWk1WTB3UkIiLCJtYWMiOiJhNWEwYzNjMDE1NzFkNDVmZGJmZGYyZGM0YjhlOWIyNTk1NDk5YjBkZmY5MTAzMDY5ODBiY2VkNjQ1ZGY2NWMwIiwidGFnIjoiIn0%3D",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1741454049.396926,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "vueschool_session",
+        "value": "eyJpdiI6InZFWTRsOGxBVnpIYWxDbEJ5aGFjT0E9PSIsInZhbHVlIjoiT2N1Um5VaGtFVnRnNlQ4UVRHY3J0QTVSSXdMUEFhcW9zSk5LMURvdW12T096NldKdlR5UlNNSnhLODVGSHpHa0E5S05EQUFTcFB3TWlkZ0ttLzJnZ1JTRVZBNHpEbWpCdWRGMENYbWdPS0Y1MCtjTEFMQnhFM0l1RzNsSjdxSDkiLCJtYWMiOiIwZTY0ODBkZWM0OTg2NmM2ZDU3MDE2MjllOThiMzk5NGEyNDRjMmI0NWZmOWIxYmQxNTIyMTJkYmE4Njc4YThkIiwidGFnIjoiIn0%3D",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1741454049.396983,
+        "httpOnly": true,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_gat",
+        "value": "1",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1740849309,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ga_JL6NZ3XEWR",
+        "value": "GS1.1.1740849244.1.1.1740849249.55.0.0",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1775409249.552913,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ga_V5K90RSCBR",
+        "value": "GS1.1.1740849244.1.1.1740849249.55.0.0",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1775409249.650226,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_vh_sid_pn",
+        "value": "2",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_drip_client_2448912",
+        "value": "vid%253D3b662ed67a4548f1b693cce6d95b9533%2526pageViews%253D2%2526sessionPageCount%253D2%2526lastVisitedAt%253D1740849249755%2526weeklySessionCount%253D1%2526lastSessionAt%253D1740849244581",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1775409250.627013,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "mp_eeb99c87c049adda2acfb54683aa2d69_mixpanel",
+        "value": "%7B%22distinct_id%22%3A%20252383%2C%22%24device_id%22%3A%20%2219552b36722246-09cce2541b845e-3c720979-e1000-19552b36722246%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%2C%22__mps%22%3A%20%7B%7D%2C%22__mpso%22%3A%20%7B%7D%2C%22__mpus%22%3A%20%7B%7D%2C%22__mpa%22%3A%20%7B%7D%2C%22__mpu%22%3A%20%7B%7D%2C%22__mpr%22%3A%20%5B%5D%2C%22__mpap%22%3A%20%5B%5D%2C%22%24user_id%22%3A%20252383%7D",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1772385249,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "userId",
+        "value": "252383",
+        "domain": "vueschool.io",
+        "path": "/",
+        "expires": 1775409249.955642,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "_ga",
+        "value": "GA1.2.1708911289.1740849244",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1775409250.138855,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "kvcd",
+        "value": "1740849250209",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": -1,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "km_lv",
+        "value": "1740849250",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1775409250.210163,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    },
+    {
+        "name": "muc_ads",
+        "value": "9fd16a3b-3331-45ad-8e08-310b3827fb03",
+        "domain": ".t.co",
+        "path": "/",
+        "expires": 1775409250.224969,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "__cf_bm",
+        "value": "nD3Ok3eu4kkMvRXXwXMOSF6PMaZxF5SKhFpPF4gh4gs-1740849250-1.0.1.1-McVkUqa7NNTP1KAKmJubkY4HV_PVz2nlJl63g4Y8rjIUKMhykI7drFvcF3ML7RoPec2ER2EcgBqt8UOJ_xfPk5LOdml40o6ur1C219Qool0",
+        "domain": ".t.co",
+        "path": "/",
+        "expires": 1740851050.22501,
+        "httpOnly": true,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "personalization_id",
+        "value": "\"v1_si+w9Lmvc9O7z9kke4B3RQ==\"",
+        "domain": ".twitter.com",
+        "path": "/",
+        "expires": 1775409250.296655,
+        "httpOnly": false,
+        "secure": true,
+        "sameSite": "None"
+    },
+    {
+        "name": "_clsk",
+        "value": "1wgutrq%7C1740849250313%7C2%7C1%7Cd.clarity.ms%2Fcollect",
+        "domain": ".vueschool.io",
+        "path": "/",
+        "expires": 1740935650,
+        "httpOnly": false,
+        "secure": false,
+        "sameSite": "Lax"
+    }
+]

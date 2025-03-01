@@ -29,6 +29,10 @@ export async function login(page: Page): Promise<void> {
     await page.waitForSelector('input[type="email"]', { timeout: 15000 });
 
     // Fill in credentials
+    await page.click('input[type="email"]');
+    await page.press('input[type="email"]', 'Backspace'); // Trigger input event
+    await page.type('input[type="email"]', email, { delay: 100 }); // Type slowly
+
     await page.fill('input[type="email"]', email);
     await page.fill('input[type="password"]', password);
 
