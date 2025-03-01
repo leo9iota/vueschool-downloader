@@ -1,6 +1,13 @@
+// ./src/utils.ts
 import { promises as fs } from 'fs';
 import path from 'path';
 
+/**
+ * Saves data to a JSON file, creating directories if they don't exist.
+ * @param filename The path where the file should be saved
+ * @param data The data to be saved as JSON
+ * @returns Promise that resolves when data has been written to file
+ */
 export async function saveToFile(filename: string, data: any): Promise<void> {
     const dir = path.dirname(filename);
 
