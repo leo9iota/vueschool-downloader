@@ -2,7 +2,7 @@
 import { Browser } from 'playwright';
 import { launchBrowser } from './src/browser';
 import { createNewPage, navigateToPage } from './src/scraper';
-import { getCourseUrls, processCourseData } from './src/courses';
+import { CourseData, getCourseUrls, processCourseData } from './src/courses';
 import { saveToFile } from './src/utils';
 
 /**
@@ -23,19 +23,18 @@ import { saveToFile } from './src/utils';
         // Save course URLs to a JSON file
         await saveToFile('./output/courses.json', courseUrls);
 
-        // Process each course
-        const courseData: { url: string; title: string | null }[] = [];
+        const courseData: CourseData[] = [];
         for (const url of courseUrls) {
             try {
                 const data = await processCourseData(page, url);
                 courseData.push(data);
-                console.log(`✅ Processed: ${url}`);
+                console.log(`✅ Processed: ${url} (${data.chapters.length} chapters)`);
             } catch (error) {
                 console.error(`❌ Failed to process: ${url}`, error);
             }
         }
 
-        // Save the processed course data
+        // Save all course details, including chapters and lessons
         await saveToFile('./output/course-details.json', courseData);
     } catch (error: unknown) {
         console.error('❌ Error scraping courses:', error);
