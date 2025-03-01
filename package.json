@@ -1,0 +1,16 @@
+{
+  "name": "vueschool-downloader",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "playwright": "^1.50.1"
+  }
+}
