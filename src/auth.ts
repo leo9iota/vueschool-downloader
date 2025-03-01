@@ -13,7 +13,6 @@ dotenv.config();
 export async function login(page: Page): Promise<void> {
     console.log('🔑 Logging into VueSchool...');
 
-    // Get credentials from environment variables
     const email = process.env.EMAIL || '';
     const password = process.env.PASSWORD || '';
 
@@ -24,17 +23,22 @@ export async function login(page: Page): Promise<void> {
     }
 
     // Navigate to the login page
-    await page.goto('https://vueschool.io/login');
+    await page.goto('https://vueschool.io/login', { waitUntil: 'domcontentloaded' });
 
-    // Fill in the credentials from environment variables
-    await page.fill('input[name="email"]', email);
-    await page.fill('input[name="password"]', password);
+    // ✅ Wait for email input field (New selector)
+    await page.waitForSelector('input[type="email"]', { timeout: 15000 });
 
-    // Click login and wait for URL change
-    await page.click('button[type="submit"]');
-    await page.waitForURL('https://vueschool.io/courses', { timeout: 15000 });
+    // Fill in credentials
+    await page.fill('input[type="email"]', email);
+    await page.fill('input[type="password"]', password);
 
-    // Save cookies for future sessions (ASYNC)
+    // Click the login button
+    await page.click('button:has-text("Sign In")');
+
+    // Wait for login success
+    await page.waitForURL('https://vueschool.io/courses', { timeout: 20000 });
+
+    // Save cookies for future sessions
     const cookies = await page.context().cookies();
     await fs.writeFile('./cookies.json', JSON.stringify(cookies));
 
