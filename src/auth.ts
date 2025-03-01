@@ -1,12 +1,12 @@
-import { Page, Browser } from 'playwright';
-import fs from 'fs';
+import { Page } from 'playwright';
+import { promises as fs } from 'fs'; // ✅ Use async-friendly `fs.promises`
 
 /**
  * Logs into VueSchool using provided credentials.
  * @param page The Playwright Page object
  */
 export async function login(page: Page): Promise<void> {
-    console.log('🔑 Logging into VueSchool...');
+    console.log("🔑 Logging into VueSchool...");
 
     // Navigate to the login page
     await page.goto('https://vueschool.io/login');
@@ -15,15 +15,15 @@ export async function login(page: Page): Promise<void> {
     await page.fill('input[name="email"]', 'your-email@example.com');
     await page.fill('input[name="password"]', 'your-secure-password');
 
-    // Click the login button and wait for navigation
+    // Click login and wait for URL change
     await page.click('button[type="submit"]');
-    await page.waitForNavigation();
+    await page.waitForURL('https://vueschool.io/courses', { timeout: 15000 });
 
-    // Save cookies for future sessions
+    // Save cookies for future sessions (ASYNC)
     const cookies = await page.context().cookies();
-    fs.writeFileSync('./cookies.json', JSON.stringify(cookies));
+    await fs.writeFile('./cookies.json', JSON.stringify(cookies));
 
-    console.log('✅ Successfully logged in!');
+    console.log("✅ Successfully logged in!");
 }
 
 /**
@@ -31,9 +31,14 @@ export async function login(page: Page): Promise<void> {
  * @param page The Playwright Page object
  */
 export async function loadCookies(page: Page): Promise<void> {
-    if (fs.existsSync('./cookies.json')) {
-        const cookies = JSON.parse(fs.readFileSync('./cookies.json', 'utf8'));
-        await page.context().addCookies(cookies);
-        console.log('🍪 Loaded saved cookies.');
+    try {
+        const cookieFileExists = await fs.stat('./cookies.json').then(() => true).catch(() => false);
+        if (cookieFileExists) {
+            const cookies = JSON.parse(await fs.readFile('./cookies.json', 'utf8'));
+            await page.context().addCookies(cookies);
+            console.log("🍪 Loaded saved cookies.");
+        }
+    } catch (error) {
+        console.error("❌ Failed to load cookies:", error);
     }
 }
