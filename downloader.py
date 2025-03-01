@@ -23,18 +23,20 @@ for course in data:
     course_dir = os.path.join(base_dir, course_title)
     os.makedirs(course_dir, exist_ok=True)
 
-    for chapter in course.get("chapters", []):
+    # Numbering chapters within the course
+    for chapter_index, chapter in enumerate(course.get("chapters", []), start=1):
+        chapter_number = f"{chapter_index:02d}"  # Format as 01, 02, etc.
         chapter_title = sanitize_filename(chapter["title"])
-        chapter_dir = os.path.join(course_dir, chapter_title)
+        chapter_dir = os.path.join(course_dir, f"{chapter_number} - {chapter_title}")
         os.makedirs(chapter_dir, exist_ok=True)
 
         # Numbering lessons within the chapter
-        for index, lesson in enumerate(chapter.get("lessons", []), start=1):
+        for lesson_index, lesson in enumerate(chapter.get("lessons", []), start=1):
+            lesson_number = f"{lesson_index:02d}"  # Format as 01, 02, etc.
             lesson_title = sanitize_filename(lesson["title"])
             video_url = lesson.get("videoUrl")
 
             if video_url:
-                lesson_number = f"{index:02d}"  # Format number as 01, 02, etc.
                 output_filename = f"{lesson_number} - {lesson_title}.mp4"
                 output_path = os.path.join(chapter_dir, output_filename)
 
