@@ -34,7 +34,7 @@ import { saveToFile } from './src/utils';
             }
         }
 
-        // Save all course details, including chapters and lessons
+        // Save structured course data with chapters & lessons
         await saveToFile('./output/course-details.json', courseData);
     } catch (error: unknown) {
         console.error('❌ Error scraping courses:', error);

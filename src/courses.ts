@@ -16,8 +16,6 @@ export interface ChapterData {
 export interface LessonData {
     title: string | null;
     url: string;
-    duration: string | null;
-    isFree: boolean;
 }
 
 /**
@@ -52,16 +50,11 @@ export async function processCourseData(page: Page, url: string): Promise<Course
         return chapterElements.map((chapter) => {
             const chapterTitle = chapter.querySelector('h2')?.textContent?.trim() || null;
 
-            // Extract lessons within the chapter
-            const lessons: LessonData[] = Array.from(chapter.querySelectorAll('a')).map(
+            // Extract lessons (only title and URL)
+            const lessons: LessonData[] = Array.from(chapter.querySelectorAll('.title')).map(
                 (lesson) => ({
                     title: lesson.textContent?.trim() || null,
-                    url: lesson.href,
-                    duration:
-                        lesson.parentElement
-                            ?.querySelector('.lesson-duration')
-                            ?.textContent?.trim() || null,
-                    isFree: lesson.innerHTML.includes('FREE'),
+                    url: (lesson.closest('a') as HTMLAnchorElement)?.href || '',
                 })
             );
 
