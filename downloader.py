@@ -11,6 +11,7 @@ with open(json_path, "r", encoding="utf-8") as f:
 # Base directory for downloads
 base_dir = os.path.expanduser("~/Videos/VueSchool_Courses")
 
+
 # Function to clean filenames
 def sanitize_filename(name):
     return "".join(c if c.isalnum() or c in " _-" else "_" for c in name)
@@ -27,12 +28,16 @@ for course in data:
         chapter_dir = os.path.join(course_dir, chapter_title)
         os.makedirs(chapter_dir, exist_ok=True)
 
-        for lesson in chapter.get("lessons", []):
+        # Numbering lessons within the chapter
+        for index, lesson in enumerate(chapter.get("lessons", []), start=1):
             lesson_title = sanitize_filename(lesson["title"])
             video_url = lesson.get("videoUrl")
 
             if video_url:
-                output_path = os.path.join(chapter_dir, f"{lesson_title}.mp4")
+                lesson_number = f"{index:02d}"  # Format number as 01, 02, etc.
+                output_filename = f"{lesson_number} - {lesson_title}.mp4"
+                output_path = os.path.join(chapter_dir, output_filename)
+
                 print(f"Downloading: {video_url} -> {output_path}")
 
                 command = [
