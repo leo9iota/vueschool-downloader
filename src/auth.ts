@@ -25,16 +25,12 @@ export async function login(page: Page): Promise<void> {
     // Navigate to the login page
     await page.goto('https://vueschool.io/login', { waitUntil: 'domcontentloaded' });
 
-    // ✅ Wait for email input field (New selector)
+    // Wait for email input field
     await page.waitForSelector('input[type="email"]', { timeout: 15000 });
 
-    // Fill in credentials
-    await page.click('input[type="email"]');
-    await page.press('input[type="email"]', 'Backspace'); // Trigger input event
-    await page.type('input[type="email"]', email, { delay: 100 }); // Type slowly
-
-    await page.fill('input[type="email"]', email);
-    await page.fill('input[type="password"]', password);
+    // Simulate slow typing to bypass bot detection
+    await page.locator('input[type="email"]').pressSequentially(email, { delay: 100 });
+    await page.locator('input[type="password"]').pressSequentially(password, { delay: 100 });
 
     // Click the login button
     await page.click('button:has-text("Sign In")');
