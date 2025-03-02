@@ -1,10 +1,10 @@
-# VueSchool Downloader
+# ⏬ VueSchool Downloader
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 ![Skills](https://skills-icons.vercel.app/api/icons?i=ts,python,playwright)
 
-## Setup
+## 🏗️ Setup
 
 >You need to have Python installed and must rename `.env.example` to `.env` with your correct credentials for [vueschool.io](https://vueschool.io/).
 
