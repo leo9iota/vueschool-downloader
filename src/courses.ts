@@ -69,7 +69,6 @@ export async function processCourseData(page: Page, url: string): Promise<Course
     for (const chapter of chapters) {
         for (const lesson of chapter.lessons) {
             lesson.videoUrl = await processLessonData(page, lesson.url);
-            console.log(`🎥 Extracted video URL: ${lesson.videoUrl}`);
         }
     }
 
