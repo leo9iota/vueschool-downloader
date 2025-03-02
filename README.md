@@ -6,8 +6,7 @@
 
 ## Setup
 
->[!info]+ Prerequisites
->You need to have Python installed and must rename `.env.example` to `.env` with your correct credentials for vueschool.io.
+>You need to have Python installed and must rename `.env.example` to `.env` with your correct credentials for [vueschool.io](https://vueschool.io/).
 
 1. Update system
 
