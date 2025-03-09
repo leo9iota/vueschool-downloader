@@ -1,63 +1,91 @@
-# ⏬ VueSchool Downloader
+# ⏬ VueSchool Downloader  
 
-## 🛠️ Tech Stack
+A useful tool to fetch and download the latest courses from [VueSchool.io](https://vueschool.io/).  
+This project is intended for **educational purposes only**.  
 
-![Skills](https://skills-icons.vercel.app/api/icons?i=ts,python,playwright)
+## 🛠️ Tech Stack  
 
-## 🏗️ Setup
+![Skills](https://skills-icons.vercel.app/api/icons?i=ts,python,playwright)  
 
->You need to have Python installed and must rename `.env.example` to `.env` with your correct credentials for [vueschool.io](https://vueschool.io/).
+## 📋 Requirements  
 
-1. Update system
+- **Python** (latest version recommended)  
+- **Node.js** (optional, for fetching course URLs)  
+- **YT-DLP** (used for downloading videos)  
+- **Aria2** (used for parallel downloads)  
+
+## ⚙️ Setup Guide  
+
+### 1️⃣ Install System Dependencies  
+
+First, update your package list:  
 
 ```sh
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 ```
 
-2. Download the latest version of YT-DLP
+Then, install `aria2`:  
+
+```sh
+sudo apt install aria2 -y
+```
+
+### 2️⃣ Install YT-DLP  
+
+Download and install the latest version of YT-DLP:  
 
 ```sh
 sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-```
-
-3. Set execution permissions
-
-```sh
 sudo chmod a+rx /usr/local/bin/yt-dlp
 ```
 
-4. Verify latest version of YT-DLP
+Verify the installation:  
 
 ```sh
 yt-dlp --version
 ```
 
-5. Install aria2
+### 3️⃣ Clone the Repository  
 
 ```sh
-sudo apt install aria2
+git clone https://github.com/leo9iota/vueschool-downloader.git  
+cd vueschool-downloader
 ```
 
-6. Clone repository and go to top-level directory
+### 4️⃣ Configure Environment Variables  
+
+Rename `.env.example` to `.env` and update it with your VueSchool.io credentials:  
 
 ```sh
-git clone https://github.com/leo9iota/vueschool-downloader.git && cd vueschool-downloader
+mv .env.example .env
+nano .env  # Edit with your credentials
 ```
 
-7. Install dependencies (optional)
+### 5️⃣ (Optional) Install Node.js Dependencies  
+
+If you want to fetch the latest course URLs dynamically:  
 
 ```sh
-npm i
+npm install
 ```
 
-8. Get the latest course URLs (optional)
+### 6️⃣ (Optional) Fetch Course URLs  
 
 ```sh
 npx tsx index.ts
 ```
 
-9. Download the courses
+### 7️⃣ Download Courses  
+
+Run the Python downloader script:  
 
 ```sh
 python3 downloader.py
 ```
+
+## 🚀 Features  
+
+✅ Fetches the latest VueSchool course URLs automatically  
+✅ Supports **YT-DLP** for high-quality downloads  
+✅ Uses **Aria2** for faster parallel downloads  
+✅ Simple and easy setup  
