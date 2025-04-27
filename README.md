@@ -3,10 +3,6 @@
 A useful tool to fetch and download the latest courses from [VueSchool.io](https://vueschool.io/).  
 This project is intended for **educational purposes only**.
 
-## ✨ Proof of Concept
-
-![rutracker.org](https://rutracker.org/forum/viewtopic.php?t=6684308)
-
 ## 🛠️ Tech Stack  
 
 ![Skills](https://skills-icons.vercel.app/api/icons?i=ts,python,playwright)  
