@@ -90,6 +90,6 @@ python3 downloader.py
 ✅ Uses **Aria2** for faster parallel downloads  
 ✅ Simple and easy setup  
 
-## ✨ Contributing
+## ✨ Contribute
 
 Please read the [CONTRIBUTING](./CONTRIBUTING.md) for information on how to contribute to this project.
