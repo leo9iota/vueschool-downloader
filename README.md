@@ -89,3 +89,7 @@ python3 downloader.py
 ✅ Supports **YT-DLP** for high-quality downloads  
 ✅ Uses **Aria2** for faster parallel downloads  
 ✅ Simple and easy setup  
+
+## ✨ Contributing
+
+Please read the [CONTRIBUTING](./CONTRIBUTING.md) for information on how to contribute to this project.
