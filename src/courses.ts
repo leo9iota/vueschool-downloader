@@ -52,8 +52,8 @@ export async function processCourseData(page: Page, url: string): Promise<Course
 
             const lessons: LessonData[] = Array.from(chapter.querySelectorAll('.title')).map(
                 (lesson) => ({
-                    title: lesson.textContent?.trim() || null,
-                    url: (lesson.closest('a') as HTMLAnchorElement)?.href || '',
+                    title: (lesson as HTMLElement).textContent?.trim() || null,
+                    url: ((lesson as HTMLElement).closest('a') as HTMLAnchorElement)?.href || '',
                     videoUrl: null, // Placeholder, will be updated later
                 })
             );
