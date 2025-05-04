@@ -55,4 +55,4 @@ Feature requests are welcome! Please create an issue with:
 
 ## License
 
-By contributing to VueSchool Downloader, you agree that your contributions will be licensed under the project's [LICENSE](./LICENSE.md).
+By contributing to VueSchool Downloader, you agree that your contributions will be licensed under the project's [LICENSE](./LICENSE).
