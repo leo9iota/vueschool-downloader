@@ -5,7 +5,14 @@ This project is intended for **educational purposes only**.
 
 ## 🛠️ Tech Stack  
 
-![Skills](https://skills-icons.vercel.app/api/icons?i=ts,python,playwright)  
+![Skills](https://skills-icons.vercel.app/api/icons?i=ts,python,playwright)
+
+## 🚀 Features  
+
+✅ Fetches the latest VueSchool course URLs automatically  
+✅ Supports **YT-DLP** for high-quality downloads  
+✅ Uses **Aria2** for faster parallel downloads  
+✅ Simple and easy setup  
 
 ## 📋 Requirements  
 
@@ -82,13 +89,6 @@ Run the Python downloader script:
 ```sh
 python3 downloader.py
 ```
-
-## 🚀 Features  
-
-✅ Fetches the latest VueSchool course URLs automatically  
-✅ Supports **YT-DLP** for high-quality downloads  
-✅ Uses **Aria2** for faster parallel downloads  
-✅ Simple and easy setup  
 
 ## ✨ Contribute
 
